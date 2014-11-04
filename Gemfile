@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'simple_form', '3.1.0.rc2'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.0'
+gem "rails_12factor"
+gem "pg"
