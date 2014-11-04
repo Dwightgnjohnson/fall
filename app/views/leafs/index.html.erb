@@ -13,7 +13,11 @@
     <% @leafs.each do |leaf| %>
       <tr>
         <td><%= leaf.name %></td>
-        <td><%= leaf.photo %></td>
+        <td>
+          <%= link_to leaf.photo.url(:large) do %>
+            <%= image_tag leaf.photo.url(:thumb) %>
+          <% end %>
+          </td>
         <td><%= link_to 'Show', leaf, class: "btn btn-success" %></td>
         <td><%= link_to 'Edit', edit_leaf_path(leaf), class: "btn btn-primary" %></td>
         <td><%= link_to 'Destroy', leaf, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %></td>

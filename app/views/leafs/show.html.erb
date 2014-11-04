@@ -7,7 +7,7 @@
 
 <p>
   <strong>Photo:</strong>
-  <%= @leaf.photo %>
+  <%= image_tag @leaf.photo.url(:thumb) %>
 </p>
 
 <%= link_to 'Edit', edit_leaf_path(@leaf) %> |
