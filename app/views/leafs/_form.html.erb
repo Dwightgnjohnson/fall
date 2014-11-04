@@ -1,5 +1,10 @@
 <%= simple_form_for @leaf do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo %>
+<div class="form-group">
+  <%= f.input :name, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-group">
+  <%= f.input :photo, input_html: { class: 'form-control' } %>
+</div>
   <%= f.button :submit, class: "btn btn-success" %>
 <% end %>
+<br>
