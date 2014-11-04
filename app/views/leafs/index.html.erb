@@ -1,6 +1,6 @@
 <h1>Listing leafs</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= leaf.name %></td>
         <td><%= leaf.photo %></td>
-        <td><%= link_to 'Show', leaf %></td>
-        <td><%= link_to 'Edit', edit_leaf_path(leaf) %></td>
-        <td><%= link_to 'Destroy', leaf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', leaf, class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_leaf_path(leaf), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', leaf, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Leaf', new_leaf_path %>
+<%= link_to 'New Leaf', new_leaf_path, class: "btn btn-success" %>
