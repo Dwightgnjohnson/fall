@@ -1,6 +1,8 @@
 class LeafsController < ApplicationController
   before_action :set_leaf, only: [:show, :edit, :update, :destroy]
 
+before_action :authenticate_user!
+
   # GET /leafs
   # GET /leafs.json
   def index
